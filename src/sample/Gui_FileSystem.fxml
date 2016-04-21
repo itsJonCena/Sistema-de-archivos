@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <ComboBox fx:id="combSector" layoutX="128.0" layoutY="193.0" prefHeight="27.0" prefWidth="164.0" promptText="Tamaño del sector" />
+      <ComboBox fx:id="combCluster" layoutX="301.0" layoutY="193.0" prefHeight="27.0" prefWidth="171.0" promptText="Tamaño del cluster" />
+      <TableView fx:id="tableView" layoutX="35.0" layoutY="14.0" prefHeight="161.0" prefWidth="530.0">
+        <columns>
+          <TableColumn fx:id="columnSector" prefWidth="75.0" text="Sectores" />
+          <TableColumn fx:id="columnContenido" prefWidth="453.0" />
+        </columns>
+      </TableView>
+      <Button layoutX="252.0" layoutY="266.0" mnemonicParsing="false" onAction="#formatear" text="Formatear :v" />
+   </children>
+</AnchorPane>
