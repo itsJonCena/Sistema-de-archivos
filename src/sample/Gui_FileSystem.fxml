@@ -1,21 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="712.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <ComboBox fx:id="combSector" layoutX="128.0" layoutY="193.0" prefHeight="27.0" prefWidth="164.0" promptText="Tamaño del sector" />
-      <ComboBox fx:id="combCluster" layoutX="301.0" layoutY="193.0" prefHeight="27.0" prefWidth="171.0" promptText="Tamaño del cluster" />
-      <TableView fx:id="tableView" layoutX="35.0" layoutY="14.0" prefHeight="161.0" prefWidth="530.0">
+      <TableView fx:id="tableView" layoutX="9.0" layoutY="100.0" prefHeight="248.0" prefWidth="694.0">
         <columns>
-          <TableColumn fx:id="columnSector" prefWidth="75.0" text="Sectores" />
-          <TableColumn fx:id="columnContenido" prefWidth="453.0" />
+          <TableColumn fx:id="column0" prefWidth="75.0" text="Sector 0" />
+          <TableColumn fx:id="column1" prefWidth="88.0" text="Sector 1" />
+            <TableColumn fx:id="column2" prefWidth="88.0" text="Sector 2" />
+            <TableColumn fx:id="column3" prefWidth="88.0" text="Sector 3" />
+            <TableColumn fx:id="column4" prefWidth="88.0" text="Sector 4" />
+            <TableColumn fx:id="column5" prefWidth="88.0" text="Sector 5" />
+            <TableColumn fx:id="column6" prefWidth="88.0" text="Sector 6" />
+            <TableColumn fx:id="column7" prefWidth="88.0" text="Sector 7" />
         </columns>
       </TableView>
-      <Button layoutX="252.0" layoutY="266.0" mnemonicParsing="false" onAction="#formatear" text="Formatear :v" />
-      <Button fx:id="archivo" layoutX="266.0" layoutY="325.0" mnemonicParsing="false" onAction="#verarchivo" text="Archivo" />
-      <Button layoutX="420.0" layoutY="266.0" mnemonicParsing="false" onAction="#creararchivo" text="vari" />
+      <Button fx:id="archivo" layoutX="238.0" layoutY="355.0" mnemonicParsing="false" onAction="#crearArchivo" text="Crear un archivo" />
+      <Button layoutX="362.0" layoutY="355.0" mnemonicParsing="false" onAction="#borrarArchivo" text="Borrar un archivo" />
+      <Label layoutX="23.0" layoutY="16.0" text="Tamaño del disco">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="39.0" text="Tamaño del sector">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="381.0" layoutY="38.0" text="Total de Pistas">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="381.0" layoutY="17.0" text="Total de Sectores">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="labeSize_Disk" layoutX="221.0" layoutY="19.0" text="Label">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labeSector_Size" layoutX="221.0" layoutY="42.0" text="Label">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labeMax_Sectors" layoutX="569.0" layoutY="19.0" text="Label">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labeMAx_pistas" layoutX="569.0" layoutY="42.0" text="Label">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

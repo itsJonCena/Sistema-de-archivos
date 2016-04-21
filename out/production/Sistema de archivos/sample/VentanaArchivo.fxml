@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="214.0" prefWidth="370.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.abrirarchivo">
+   <children>
+      <TextField fx:id="nomar" layoutX="111.0" layoutY="47.0" />
+      <TextField fx:id="tamaar" layoutX="111.0" layoutY="113.0" />
+      <Label layoutX="134.0" layoutY="22.0" text="Nombre del Archivo" />
+      <Label layoutX="134.0" layoutY="90.0" text="Tamaño del Archivo" />
+      <Button layoutX="165.0" layoutY="153.0" mnemonicParsing="false" onAction="#imprimirvariable" text="Crear" />
+   </children>
+</AnchorPane>
