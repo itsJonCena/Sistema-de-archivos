@@ -3,11 +3,17 @@ package sample;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -18,6 +24,9 @@ public class Controller implements Initializable {
     @FXML private TableColumn<String,Sector7G> columnContenido;
     @FXML ComboBox<String> combSector;
     @FXML ComboBox<String> combCluster;
+    @FXML private Button archivo;
+
+
 
     private final ObservableList strings = FXCollections.observableArrayList(
             "1","2","4","8");
@@ -44,9 +53,16 @@ public class Controller implements Initializable {
 
     }
 
-    @FXML public void creararchivo(){
 
 
+
+    @FXML public void verarchivo() throws IOException {
+        final Stage stage;
+        stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("VentanaArchivo.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
 
