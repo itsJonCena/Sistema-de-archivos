@@ -5,7 +5,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="712.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="592.0" prefWidth="712.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <TableView fx:id="tableView" layoutX="9.0" layoutY="100.0" prefHeight="248.0" prefWidth="694.0">
         <columns>
@@ -61,5 +61,6 @@
             <Font size="16.0" />
          </font>
       </Label>
+      <TreeView fx:id="trevi" layoutX="8.0" layoutY="402.0" prefHeight="150.0" prefWidth="694.0" />
    </children>
 </AnchorPane>

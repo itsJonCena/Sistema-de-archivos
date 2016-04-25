@@ -11,15 +11,18 @@ public class NFile {
 
     double tamaarchivo;
 
+    String fecha;
+
 
     //private final StringProperty nombreArchivo;
     //private final StringProperty tamañoArchio;
 
-    public NFile(String nomarchivo , double tamaarchivo){
+    public NFile(String nomarchivo , double tamaarchivo , String fecha){
         //nombreArchivo = new SimpleStringProperty(nomarchivo);
         //tamañoArchio = new SimpleStringProperty(""+tamaarchivo);
         this.nomarchivo = nomarchivo;
         this.tamaarchivo = tamaarchivo;
+        this.fecha = fecha;
     }
 
 
@@ -40,5 +43,11 @@ public class NFile {
         this.tamaarchivo = tamaarchivo;
     }
 
+    public String getFecha() {
+        return fecha;
+    }
 
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
 }
