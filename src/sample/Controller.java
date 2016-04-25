@@ -12,13 +12,16 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.Optional;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class Controller implements Initializable {
 
     @FXML private TableView<Pista> tableView;
     @FXML private Button archivo;
+    @FXML private TreeView<String> trevi;
+    @FXML private TreeItem<String> root = new TreeItem<>("Archivos");
+
+
 
     @FXML TableColumn<Pista,String> column0;
     @FXML TableColumn<Pista,String> column1;
@@ -53,6 +56,7 @@ public class Controller implements Initializable {
     @FXML public void crearArchivo() {
         String nombrearchivo = "";
         double tamaarchivo = 0;
+        Date fecha = new Date();
 
 
         TextInputDialog dialog = new TextInputDialog("");
@@ -77,7 +81,9 @@ public class Controller implements Initializable {
         for (int f = 1; f < 1000; f++) {
             for (int c = 0; c < 8; c++) {
                 if (disk[f][c] == null) {
-                    NFile nuevo = new NFile(nombrearchivo, tamaarchivo);
+                    NFile nuevo = new NFile(nombrearchivo, tamaarchivo ,""+fecha);
+                    root.getChildren().add(new TreeItem<>("Nombre: "+nuevo.getNomarchivo()+" Fecha "+ nuevo.getFecha()+" Tama: "+nuevo.getTamaarchivo()));
+
 
                     //disk[f][c] = new NFile(nombrearchivo, tamaarchivo);
                     double dv = (nuevo.getTamaarchivo()*1000)/512;
@@ -141,16 +147,6 @@ public class Controller implements Initializable {
 
 
 
-    /*
-    @FXML public void verarchivo() throws IOException {
-        final Stage stage;
-        stage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("VentanaArchivo.fxml"));
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-    */
 
     public boolean isdigit(Double dig){
 
@@ -200,12 +196,17 @@ public class Controller implements Initializable {
 
 
 
+
+
+
     @Override
     public void initialize(URL arg, ResourceBundle rb) {
         labeSize_Disk.setText(""+SIZE_DISK +" Bytes");
         labeSector_Size.setText(""+SECTOR_SIZE+" Bytes");
         labeMax_Sectors.setText(""+MAX_SETORS);
         labeMAx_pistas.setText(""+MAX_PISTAS);
+
+        trevi.setRoot(root);
         /*
         disk[0][0] = new NFile("file0",2);
         disk[0][1] = new NFile("file1",2);
@@ -239,5 +240,8 @@ public class Controller implements Initializable {
         updateTable();
         */
     }
+
+
+
 
 }
